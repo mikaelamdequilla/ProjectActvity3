@@ -1,17 +1,19 @@
 import requests
 
-response = requests.get("http://ip-api.com/json/180.191.168.117").json() #Using IPI-API 
+response = requests.get("http://ip-api.com/json/180.191.168.117").json() #Using IP-API 
 
 #Display Information
 print("======================================================")
-print("   IPv4 Address: " + response['query'] + ".")
-print("   Country: " + response['country'] + ".")
-print("   Region Name: " +  response['regionName'] + ".")
-print("   City: " +  response['city'] + ".")
-print("   Latitude: " +  str(response['lat']) + ".")
-print("   Longitude: " + str(response['lon']) + ".")
-print("   ISP: " + response['isp'] + ".")
-print("   Autonomous System: " + response['as']  + ".")
-print("   Country Code: " + response['countryCode'] + ".")
-print("   Status: " + response['status'] + ".")
+print("   IPv4 Address: " + response['query'] + ".") #display IPv4 address
+print("   Latitude: " +  str(response['lat']) + ".") #display the latitude of the ip address
+print("   Longitude: " + str(response['lon']) + ".") #display the longitude of the ip address
+print("   Country: " + response['country'] + ".") #display country of the ip address
+print("   Country Code: " + response['countryCode'] + ".") #display the country code
+print("   Region Name: " +  response['regionName'] + ".") #display the region name of the ip address
+print("   City: " +  response['city'] + ".") #display the city of the ip address
+print("   ISP: " + response['isp'] + ".") #display the internet service provider
+print("   Autonomous System: " + response['as']  + ".") #display the autonomous system of the ISP
+print("   Status: " + response['status'] + ".") #display the status of the request
 print("======================================================")
+
+
