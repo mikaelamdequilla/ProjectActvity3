@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IP Finder</title>
+
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="title"><h1>IP Address Finder</h1></div>
+            <div>
+                <form action="{{url_for('Index')}}" method="post">
+                    <div class="form-group">
+                        <input type="text" name = "search" class="searchBar" placeholder="Enter IP Address">
+                        <input type="submit" class="submitBtn" value="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="ipSection">
+                <p class="label">Your IPv4 Address</p>
+                <p class="ipValue">{{data.ip}}</p>
+            </div>
+            <div class="secondSection">
+                <div class="contentContainer">
+                    <p class="label">ISP</p>
+                    <p class="values"><b>{{data.org}}</b></p>
+                </div>
+                <div class="contentContainer">
+                    <p class="label">Location</p>
+                    <p class="values"><b>{{data.city}}, {{data.region}}</b></p>
+                </div>
+            </div>
+            <div class="thirdSection">
+                <div class="contentContainer">
+                    <p class="label">Latitude</p>
+                    <p class="values">{{data.latitude}}</p>
+                </div>
+                <div  class="contentContainer">
+                    <p class="label">Longitude</p>
+                    <p class="values">{{data.longitude}}</p>
+                </div>
+                <div class="contentContainer">
+                    <p class="label">Country</p>
+                    <p class="values">{{data.country_name}}</p>
+                </div>
+                <div class="contentContainer">
+                    <p class="label">ASN</p>
+                    <p class="values">{{data.asn}}</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
