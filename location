@@ -1,8 +1,7 @@
 import requests
 
 response = requests.get("http://ip-api.com/json/180.191.168.117").json() #Using IP-API 
-#esponse = requests.get("http://ip-api.com/json/{}").json() #Using IP-API
-#ipadd = input("IP:")
+
 
 #Display Information
 print("======================================================")
